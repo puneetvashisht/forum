@@ -1,0 +1,13 @@
+<div>
+
+
+    <input type="text" ng-model="searchText.$" placeholder="Search All Categories"/>
+
+    <table class="table">
+        <tr ng-repeat="category in categories| filter:searchText">
+            <td><a ng-href="#/topic/{{category.name}}">{{category.name}}</a></td>
+            <td>{{category.description}}</td>
+
+        </tr>
+    </table>
+</div>

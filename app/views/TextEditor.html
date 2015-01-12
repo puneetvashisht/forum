@@ -1,0 +1,23 @@
+<div><h1>Text Editor</h1></div>
+<div text-angular ng-model="htmlVariable" name="demo-editor" ></div>
+
+<!--<div class="container text-center lighter border-around">
+    <div class="lighter">
+        <p ng-bind="htmlVariable" class="text-left text-med text-gray"></p>
+    </div>
+</div>-->
+
+<!--<div ta-bind ng-model="abc"></div>-->
+
+<br>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Preview</div>
+    <div class="panel-body">
+        <div ng-bind-html="htmlVariable"></div>
+    </div>
+</div>
+
+
+
+<button ng-click="sendToServer()">Submit</button>
