@@ -34,7 +34,7 @@ angular
                         controller: 'TopicCtrl'
                     })
                     .otherwise({
-                        redirectTo: '/'
+                        redirectTo: '/TextEditor'
                     });
             });
 
