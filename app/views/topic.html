@@ -5,9 +5,13 @@ Garima -- Add Pagination HEre
 <input type="text" ng-model="searchText.$" placeholder="Search All Topics"/>
 
 <table class="table">
-    <tr ng-repeat="topic in topics| filter:searchText">
+    <!--<tr ng-repeat="topic in topics| filter:searchText">-->
+        <tr dir-paginate="topic in topics| filter:searchText | itemsPerPage: pageSize" current-page="currentPage">
+
         <td><a ng-href="#/someURL/{{topic.name}}">{{topic.name}}</a></td>
         <td>{{topic.user}}</td>
 
     </tr>
 </table>
+
+<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls>

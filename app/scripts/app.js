@@ -6,7 +6,9 @@ angular
      'ui.bootstrap',
         'textAngular',
         'colorpicker.module',
-        'wysiwyg.module'
+        'wysiwyg.module',
+        'angularUtils.directives.dirPagination'
+
   ])
 
 

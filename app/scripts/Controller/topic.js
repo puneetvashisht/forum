@@ -8,9 +8,14 @@ angular.module('TextEditorDemo')
     console.log('Printing Category ID');
     console.log($routeParams.category);
         $scope.category = $routeParams.category;
+        $scope.currentPage = 1;
+        $scope.pageSize = 5;
 
+        $scope.pageChangeHandler = function(num) {
+            console.log('Page Changing To ' + num);
+        };
 
-        $scope.topics = null;
+        $scope.topics = [];
         $http({
             method: 'GET',
             url: 'topics.json'
